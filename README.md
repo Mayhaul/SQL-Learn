@@ -1,2 +1,3 @@
 # SQL-Learn
-Starting to learn SQL
+Starting to learn SQL.
+Day1:   
