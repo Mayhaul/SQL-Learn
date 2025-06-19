@@ -1,12 +1,14 @@
-CREATE DATABASE college;
-use college;
-CREATE TABLE student (
-id INT PRIMARY KEY,
-name VARCHAR(50),
-age INT NOT NULL
-);
+CREATE DATABASE IF NOT EXISTS xyz;
+USE xyz;
+CREATE TABLE employee(ID INT PRIMARY KEY,
+						name VARCHAR(50),
+                        salary BIGINT);
+INSERT INTO employee(ID,name,salary)
+VALUES
+(1,"adam",25000),
+(2,"bob",30000),
+(3,"casey",40000);
 
-INSERT INTO student VALUES(1,"Mehul",18);
-INSERT INTO student VALUES(2,"Akshita",17);
-
-SELECT * FROM student;
+SELECT*FROM employee;                        
+                        
+                        
