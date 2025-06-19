@@ -1,14 +1,21 @@
-CREATE DATABASE IF NOT EXISTS xyz;
-USE xyz;
-CREATE TABLE employee(ID INT PRIMARY KEY,
-						name VARCHAR(50),
-                        salary BIGINT);
-INSERT INTO employee(ID,name,salary)
-VALUES
-(1,"adam",25000),
-(2,"bob",30000),
-(3,"casey",40000);
-
-SELECT*FROM employee;                        
-                        
-                        
+CREATE DATABASE college;
+use college;
+ CREATE TABLE student(
+ rollno INT PRIMARY KEY,
+ name VARCHAR(50),
+ marks INT NOT NULL,
+ grade VARCHAR(1),
+ city VARCHAR(20)
+ );
+ 
+ INSERT INTO student
+ (rollno,name,marks,grade,city)
+ VALUES
+ (101,"anil",78,"C","Pune"),
+ (102,"bhumika",93,"A","Mumbai"),
+ (103,"chetan",85,"B","Mumbai"),
+ (104,"dhruv",96,"A","Delhi"),
+ (105,"emanuel",12,"E","Delhi"),
+ (106,"farah",82,"B","Delhi");
+ 
+ SELECT DISTINCT city FROM student;
