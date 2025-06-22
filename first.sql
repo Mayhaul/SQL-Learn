@@ -18,11 +18,11 @@ use college;
  (105,"emanuel",12,"E","Delhi"),
  (106,"farah",82,"B","Delhi");
  
-SELECT city,AVG(marks) AS avg_marks
-FROM student
-GROUP BY city
-HAVING avg_marks >70 
-ORDER BY AVG(marks) ASC;
+select name,city,marks
+from student
+where city != "mumbai"
+order by marks desc;
+
 
 CREATE DATABASE IF NOT EXISTS sales;
 USE sales;
@@ -45,6 +45,6 @@ VALUES
 (109, 'Isabella Martinez', 'Netbanking', 'Nashville'),
 (110, 'Jackson Brooks', 'Credit Card', 'Boston');
 
-SELECT mode,COUNT(customer)
-FROM customer_data
-GROUP BY mode;
+select city,mode,COUNT(customer_id)
+from customer_data
+group by city,mode;
